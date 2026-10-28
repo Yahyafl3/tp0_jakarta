@@ -1,0 +1,14 @@
+Comportement de base décrit par les consignes disponibles (extrait de référence, pas une copie certifiée de la correction officielle) :
+
+public String genererReponse(String question, String roleSysteme) {
+    StringBuilder resultat = new StringBuilder();
+    if (roleSysteme != null) {
+        resultat.append(roleSysteme.toUpperCase(Locale.ROOT)).append('\n');
+    }
+    resultat.append("||")
+            .append(question.toLowerCase(Locale.ROOT))
+            .append("||");
+    return resultat.toString();
+}
+
+Dans la version bonus active, GenerateurReponse.java remplace ce traitement par le classement de l'intention de la phrase.
